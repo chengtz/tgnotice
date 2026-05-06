@@ -69,17 +69,9 @@ URL: https://example.com
 Platform: Desktop
 Description: Telegram message notify
 ```
-创建成功后保存：
-```text
-api_id
-api_hash
-```
-
 注意：
+若提示ERROR，请使用原生非机房IP进行申请，若需要帮忙申请API请联系 telegram@junglexin
 
-```text
-请使用原生非机房IP进行申请，若需要帮忙申请API请联系 telegram@junglexin
-```
 
 
 
