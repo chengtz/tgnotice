@@ -1,25 +1,14 @@
 # Telegram消息无代理接收
 
-# Telegram 消息推送方案对比：API + VPS vs Bot + Cloudflare Worker
 
-本文对比两种常见的 Telegram 消息转发/通知方案：
-
-1. **Telegram API + VPS 方案**  
-   使用 `api_id` / `api_hash`，通过 Python + Telethon 登录个人 Telegram 账号，在 VPS 上长期监听消息，然后推送到飞书、企业微信、钉钉、Bark、ntfy 等通知渠道。
-
-2. **Telegram Bot + Cloudflare Worker 方案**  
-   使用 Telegram Bot Token，通过 Telegram Bot Webhook 把 Bot 收到的消息推送到 Cloudflare Worker，再由 Worker 转发到飞书、企业微信、钉钉、Bark、ntfy 等通知渠道。
-
----
-
-## 一、整体链路对比
+## 整体链路对比
 
 | 方案 | 消息来源 | 中转服务 | 推送目标 | 是否需要 VPS |
 |---|---|---|---|---|
 | Telegram API + VPS | 个人 Telegram 账号收到的私聊、群消息、频道消息 | VPS 上的 Python 脚本 | 飞书 / 企业微信 / 钉钉 / Bark / ntfy / Server酱等 | 需要 |
 | Telegram Bot + Cloudflare Worker | Telegram Bot 收到的消息 | Cloudflare Worker | 飞书 / 企业微信 / 钉钉 / Bark / ntfy / Discord / Slack等 | 不需要 |
 
-本项目用于将Telegram 新消息无代理自动推送
+本项目用于将Telegram 新消息无代理自动推送，若需要第二种方案，可见链接
 
 ```text
 Telegram 收到新消息
