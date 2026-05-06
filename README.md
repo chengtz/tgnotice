@@ -5,7 +5,7 @@
 
 | 方案 | 消息来源 | 中转服务 | 推送目标 | 是否需要 VPS |
 |---|---|---|---|---|
-| Telegram API + VPS | 个人 Telegram 账号收到的私聊、群消息、频道消息 | VPS 上的 Python 脚本 | 飞书 / 企业微信 / 钉钉 / Bark / ntfy / Server酱等 | 需要 |
+| Telegram API + VPS | 个人 Telegram 账号收到的私聊、群消息、频道消息 | VPS 上的 Python 脚本 | 飞书 / 企业微信 / 钉钉 / Bark / ntfy / Server酱等 | 需要，kb级应用 |
 | Telegram Bot + Cloudflare Worker | Telegram Bot 收到的消息 | Cloudflare Worker | 飞书 / 企业微信 / 钉钉 / Bark / ntfy / Discord / Slack等 | 不需要 |
 
 本项目用于将Telegram 新消息无代理自动推送，若需要第二种方案，[可见这里](https://github.com/chengtz/tgnotice/blob/main/README_cfworker.md)
