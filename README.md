@@ -70,7 +70,7 @@ Platform: Desktop
 Description: Telegram message notify
 ```
 注意：
-若提示ERROR，请使用原生非机房IP进行申请，若需要帮忙申请API请联系 telegram@junglexin
+若提示ERROR，请使用原生非机房IP进行申请，若需要帮忙申请API请联系 [telegram@junglexin](https://t.me/junglexin)
 
 
 
