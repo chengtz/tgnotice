@@ -28,8 +28,25 @@ VPS 上 Python 脚本监听 Telegram
 - 支持 systemd 后台运行和开机自启
 
 ## 准备工作
+## 一、创建飞书/企微/钉钉群机器人 Webhook
 
-## 一、申请 Telegram API
+例如：下载飞书电脑端APP
+
+```text
+群设置
+→ 群机器人
+→ 添加机器人
+→ 自定义机器人
+```
+
+创建完成后会得到一个 Webhook，格式类似：
+
+```text
+https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+同理，企业微信机器人及其他程序webhook可自行搜索方法。
+
+## 二、申请 Telegram API
 
 打开 Telegram 官方开发者页面：
 ```text
@@ -53,27 +70,10 @@ api_hash
 注意：
 
 ```text
-api_id 和 api_hash 不要公开。
-api_hash 泄露后建议重新创建或更换。
+API会检测IP，请使用原生非机房IP进行申请，若需要代申请请联系 telegram@junglexin
 ```
 
-## 二、创建飞书群机器人 Webhook
 
-下载飞书电脑端APP
-
-```text
-群设置
-→ 群机器人
-→ 添加机器人
-→ 自定义机器人
-```
-
-创建完成后会得到一个 Webhook，格式类似：
-
-```text
-https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
-同理，企业微信机器人及其他程序webhook可自行搜索方法。
 
 ## 三、运行脚本
 
