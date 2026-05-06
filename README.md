@@ -1,6 +1,6 @@
-# Telegram 消息转发到飞书群提醒教程
+# Telegram消息无代理接收
 
-本项目用于将 Telegram 新消息自动推送到飞书群机器人，实现：
+本项目用于将Telegram 新消息无代理自动推送
 
 ```text
 Telegram 收到新消息
@@ -12,7 +12,7 @@ VPS 上 Python 脚本监听 Telegram
 飞书群收到提醒
 ```
 
-最终飞书群消息格式示例：
+最终飞书消息格式示例：
 
 ```text
 张三: 你好，在吗？
@@ -20,7 +20,7 @@ VPS 上 Python 脚本监听 Telegram
 
 ## 功能特点
 
-- 支持 Telegram 私聊消息推送到飞书群
+- 支持 Telegram 私聊消息推送
 - 支持飞书群机器人 Webhook 直推，不依赖 Server 酱
 - 支持过滤群组/频道消息，只推送私聊
 - 支持关键词过滤
@@ -29,28 +29,14 @@ VPS 上 Python 脚本监听 Telegram
 
 ## 准备工作
 
-你需要准备：
-
-```text
-1. 一台可以访问 Telegram 的 VPS
-2. Telegram 账号
-3. Telegram api_id 和 api_hash
-4. 飞书群机器人 Webhook
-5. Python3 环境
-```
-
 ## 一、申请 Telegram API
 
 打开 Telegram 官方开发者页面：
-
 ```text
 https://my.telegram.org/apps
 ```
-
 登录你的 Telegram 账号。
-
 创建 App 时可以参考：
-
 ```text
 App title: TGNotify2026
 Short name: tgnotify2026
@@ -58,9 +44,7 @@ URL: https://example.com
 Platform: Desktop
 Description: Telegram message notify
 ```
-
 创建成功后保存：
-
 ```text
 api_id
 api_hash
@@ -73,11 +57,9 @@ api_id 和 api_hash 不要公开。
 api_hash 泄露后建议重新创建或更换。
 ```
 
-页面里的 `Available MTProto servers` 一般不用管，Telethon 会自动处理连接。
-
 ## 二、创建飞书群机器人 Webhook
 
-进入飞书群：
+下载飞书电脑端APP
 
 ```text
 群设置
@@ -91,23 +73,9 @@ api_hash 泄露后建议重新创建或更换。
 ```text
 https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
+同理，企业微信机器人及其他程序webhook可自行搜索方法。
 
-注意：
-
-```text
-Webhook 等同于推送密钥，不要公开。
-发论坛或开源时一定要打码。
-```
-
-如果开启了关键词校验，例如关键词是：
-
-```text
-Telegram
-```
-
-那么脚本推送内容里必须包含 `Telegram`，否则飞书会拒收。
-
-## 三、测试飞书 Webhook
+## 三、测试飞书/企业微信/钉钉 Webhook
 
 在 VPS 上执行：
 
