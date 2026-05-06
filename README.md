@@ -78,7 +78,7 @@ api_hash
 注意：
 
 ```text
-API会检测IP，请使用原生非机房IP进行申请，若需要代申请请联系 telegram@junglexin
+请使用原生非机房IP进行申请，若需要帮忙申请API请联系 telegram@junglexin
 ```
 
 
