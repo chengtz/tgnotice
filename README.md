@@ -77,7 +77,6 @@ https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
 
 ## 三、运行脚本
 
-一键脚本
 curl -fsSL https://raw.githubusercontent.com/chengtz/tgnotice/main/install_tg_feishu_oneclick.sh -o install_tg_feishu_oneclick.sh && chmod +x install_tg_feishu_oneclick.sh && sudo bash install_tg_feishu_oneclick.sh
 
 
